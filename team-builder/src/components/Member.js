@@ -7,9 +7,10 @@ const Member = ({member}) => {
 	return (
 		<MemberStyles>
 			<h2>{name} <span>{id}</span></h2>
-						<p>{email}</p>
+			<p>{email}</p>
 		</MemberStyles>
 	)
 }
 
 export default Member
+ 

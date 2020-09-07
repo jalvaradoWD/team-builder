@@ -4,7 +4,7 @@ import axios from "axios";
 import Form from "./components/Form";
 import MembersList from './MembersList'
 
-import {ContentContainer} from './styles/App.styles'
+import {ContentContainer, AppStyles} from './styles/App.styles'
 
 function App() {
 	const [members, setMembers] = useState([]);
@@ -20,14 +20,14 @@ function App() {
 	});
 
 	return (
-		<>
+		<AppStyles>
 			<h1>Team Member Builder</h1>
 
 			<ContentContainer>
 				<MembersList setMembers={setMembers} members={members} />
 				<Form />
 			</ContentContainer>
-		</>
+		</AppStyles>
 	);
 }
 
