@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-import Form from "./Form";
+import Form from "./components/Form";
+import MembersList from './MembersList'
+
+import {ContentContainer} from './styles/App.styles'
 
 function App() {
 	const [members, setMembers] = useState([]);
@@ -20,24 +23,10 @@ function App() {
 		<>
 			<h1>Team Member Builder</h1>
 
-			<div>
-				<section>
-					{members
-						? members.map(({ name, email, id }) => {
-								return (
-									<div>
-										<h2>{name}</h2>
-										<p>{email}</p>
-										<p>{id}</p>
-									</div>
-								);
-						  })
-						: null}
-				</section>
-				<section>
-					<Form />
-				</section>
-			</div>
+			<ContentContainer>
+				<MembersList setMembers={setMembers} members={members} />
+				<Form />
+			</ContentContainer>
 		</>
 	);
 }

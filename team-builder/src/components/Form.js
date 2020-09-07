@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import StyledForm from "./styles/Form.styles";
+import StyledForm from "../styles/Form.styles";
 
 const Form = () => {
 	const [fullName, setFullName] = useState();
@@ -9,7 +9,7 @@ const Form = () => {
 	const createUser = () => {};
 
 	return (
-		<form>
+		<StyledForm>
 			<h2>Add Team Member</h2>
 			<div>
 				<label htmlFor="fullName">Full Name</label>
@@ -29,7 +29,7 @@ const Form = () => {
 					placeholder="Email"
 				/>
 			</div>
-		</form>
+		</StyledForm>
 	);
 };
 
