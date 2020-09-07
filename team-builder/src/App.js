@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+import Form from "./Form";
+
 function App() {
 	const [members, setMembers] = useState([]);
 
@@ -32,10 +34,9 @@ function App() {
 						  })
 						: null}
 				</section>
-				<form>
-					<h2>Add Team Member</h2>
-					<input type="text" placeholder="Add team members" />
-				</form>
+				<section>
+					<Form />
+				</section>
 			</div>
 		</>
 	);
