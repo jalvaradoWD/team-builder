@@ -2,14 +2,25 @@ import React, { useState } from "react";
 
 import FormStyles from "../styles/Form.styles";
 
-const Form = () => {
+const Form = ({ setMembers, members }) => {
 	const [fullName, setFullName] = useState();
 	const [email, setEmail] = useState();
 
-	const createUser = () => {};
+	const createUser = (e) => {
+		e.preventDefault();
+		const newUser = {
+			name: fullName,
+			email: email,
+			id: members.length + 1,
+		};
+
+		setMembers([...members, newUser]);
+		setFullName("");
+		setEmail("");
+	};
 
 	return (
-		<FormStyles>
+		<FormStyles onSubmit={createUser}>
 			<h2>Add Team Member</h2>
 			<div className="form-group">
 				<label htmlFor="fullName">Full Name</label>
