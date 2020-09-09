@@ -38,6 +38,7 @@ const FormStyles = styled.form`
 	background-color: lightgrey;
 	row-gap: 1rem;
 	border-radius: 10px;
+	padding-top: 2rem;
 `;
 
 export default FormStyles;

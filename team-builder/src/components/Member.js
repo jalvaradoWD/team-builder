@@ -9,8 +9,8 @@ const Member = ({ member }) => {
 			<h2>
 				{name} <span>{id}</span>
 			</h2>
-			<p>{email}</p>
-			<p>{role}</p>
+			<p className="role">{role}</p>
+			<p className="email">{email}</p>
 		</MemberStyles>
 	);
 };
